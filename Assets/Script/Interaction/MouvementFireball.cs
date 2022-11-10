@@ -17,6 +17,7 @@ public class MouvementFireball : MonoBehaviour
     {
         Debug.Log(gameObject.name + " has hit " + collision.gameObject.name);
         collision.gameObject.GetComponent<EnemyLife>().DeathEnemy();
+        Destroy(gameObject);
     }
     // Update is called once per frame
     void Update()

@@ -375,7 +375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meanGuy: {fileID: 7158919033183103036, guid: da39d31dbfd751747b5ce286525f5499, type: 3}
-  spawnerInterval: 0.9
+  spawnerInterval: 1.5
+  spawnDelayAcceleration: 0.5
   spawnPositions:
   - {fileID: 917496121}
   - {fileID: 532101727}
@@ -673,7 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8f238b428975c499124644cc7ac693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0.5
+  fireRate: 0.9
   firePosition: {fileID: 2132041327}
   projectilePrefab: {fileID: 1220175994381860156, guid: 3dfef80ca74a5684e9dd6a644fd5eceb, type: 3}
   speed: 5
@@ -1309,7 +1310,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1830891748}
   - component: {fileID: 1830891747}
+  - component: {fileID: 1830891751}
   - component: {fileID: 1830891749}
+  - component: {fileID: 1830891750}
   m_Layer: 0
   m_Name: Square
   m_TagString: Player
@@ -1405,6 +1408,48 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &1830891750
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830891746}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1830891751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830891746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854e26a7575a5464dbe525554bdeef4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 650227690}
+  - {fileID: 1512212509}
+  - {fileID: 1381302710}
 --- !u!1 &2041096064
 GameObject:
   m_ObjectHideFlags: 0

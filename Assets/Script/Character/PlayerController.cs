@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("Le joueur appuie sur la touche Z");
             if (currentPosition > 0){
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             Debug.Log("Le joueur appuie sur la touche S");
             if (currentPosition < 2)
