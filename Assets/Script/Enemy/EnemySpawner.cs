@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     
     public float spawnerInterval = 3.5f;
     //public List<Transform> spawning;
-    public Transform spawnPosition;
+    public List<Transform> spawnPositions;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,9 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator spawnEnemy(float spawnerInterval, GameObject meanGuy)
     {
         yield return new WaitForSeconds(spawnerInterval);
-        GameObject newEnemy = Instantiate(meanGuy, spawnPosition.position, spawnPosition.rotation);
+        //spawnPositions aléatoire dans l'intervalle [0; 3[
+        int rand = Random.Range(0, spawnPositions.Count);
+        GameObject newEnemy = Instantiate(meanGuy, spawnPositions[rand].position, spawnPositions[rand].rotation);
         StartCoroutine(spawnEnemy(spawnerInterval, meanGuy));
     }
 }
