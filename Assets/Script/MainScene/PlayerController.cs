@@ -12,11 +12,12 @@ public class PlayerController : MonoBehaviour
     public List<Transform> places;
     [Range(0,2)]
     public int currentPosition = 1; //La currentPosition est 0 1 ou 2
-    public float startX = 0;
+    public float startX = 0, offsetX = 1;
     // Start is called before the first frame update
     void Start()
     {
-        startX = transform.position.x;
+        //startX = transform.position.x;
+        startX = Camera.main.ViewportToWorldPoint(new Vector2(0.1f, 0)).x;// + offsetX;
         transform.position = new Vector3(startX, places[currentPosition].position.y, 0);
     }
 
