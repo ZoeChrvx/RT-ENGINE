@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [Range(0,2)]
     public int currentPosition = 1; //La currentPosition est 0 1 ou 2
     public float startX = 0, offsetX = 1;
-    // Start is called before the first frame update
+
     void Start()
     {
         //startX = transform.position.x;
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(startX, places[currentPosition].position.y, 0);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
