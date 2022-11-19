@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7158919033183103024}
   - component: {fileID: 7158919033183103039}
   - component: {fileID: 7158919033183103038}
+  - component: {fileID: -5027805215212559428}
   - component: {fileID: 7158919033183103026}
   - component: {fileID: 8491308013099852110}
   - component: {fileID: 6275199918613722655}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 54
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8396226, g: 0.16237983, b: 0.16237983, a: 1}
+  m_Color: {r: 1, g: 0.023381807, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,6 +137,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-5027805215212559428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158919033183103036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9516cc40c4b173540a44fb34b35b2d73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 7927955212105129172, guid: c302bb83252981e4598d3c80393c5434, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 777e14e6f0fdeab4399ea6ee3619d850, type: 2}
 --- !u!114 &7158919033183103026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,9 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc512c7b000a54d831a06629a279de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drop:
-  - {fileID: 7927955212105129172, guid: c302bb83252981e4598d3c80393c5434, type: 3}
-  enemy: 1
 --- !u!114 &6275199918613722655
 MonoBehaviour:
   m_ObjectHideFlags: 0
