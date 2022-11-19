@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8491308013099852110}
   - component: {fileID: 6275199918613722655}
   m_Layer: 0
-  m_Name: MeanGuy
+  m_Name: MeanGuy0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7158919033183103024
 SpriteRenderer:
@@ -161,7 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drop:
-  - {fileID: 8795407292167216584, guid: 0bacee03c9a5d544696b4554cb9dafd9, type: 3}
+  - {fileID: 7927955212105129172, guid: c302bb83252981e4598d3c80393c5434, type: 3}
+  enemy: 1
 --- !u!114 &6275199918613722655
 MonoBehaviour:
   m_ObjectHideFlags: 0

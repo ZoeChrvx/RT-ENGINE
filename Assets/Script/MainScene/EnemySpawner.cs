@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     
-    public GameObject meanGuy;
+    public GameObject[] meanGuy;
     
     public float spawnerInterval = 3.5f;
     public float spawnDelayAcceleration = 0.1f;
@@ -24,12 +24,13 @@ public class EnemySpawner : MonoBehaviour
         
     }
 
-    private IEnumerator spawnEnemy(GameObject meanGuy)
+    private IEnumerator spawnEnemy(GameObject[] meanGuy)
     {
         yield return new WaitForSeconds(spawnerInterval);
         //spawnPositions aléatoire dans l'intervalle [0; 3[
+        int randEnemy = Random.Range(0, meanGuy.Length);
         int rand = Random.Range(0, spawnPositions.Count);
-        GameObject newEnemy = Instantiate(meanGuy, spawnPositions[rand].position, spawnPositions[rand].rotation);
+        GameObject newEnemy = Instantiate(meanGuy[randEnemy], spawnPositions[rand].position, spawnPositions[rand].rotation);
         spawnerInterval = Mathf.Max(spawnerInterval -spawnDelayAcceleration, minInterval);
         StartCoroutine(spawnEnemy(meanGuy));
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour
 {
     public List<GameObject> drop;
-    int enemy = 1;
+    public int enemy = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,7 @@ public class EnemyLife : MonoBehaviour
     {
         Debug.Log("Cheh");
         enemy--;
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
         Destroy(gameObject);
         
     }
