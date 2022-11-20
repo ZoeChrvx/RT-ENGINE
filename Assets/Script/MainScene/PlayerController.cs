@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
     public int currentPosition = 1; //La currentPosition est 0 1 ou 2
     public float startX = 0, offsetX = 1;
 
-    public int powerUp = 0;
-
     void Start()
     {
         //startX = transform.position.x;
@@ -28,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            Debug.Log("Le joueur appuie sur la touche Z");
+            //Debug.Log("Le joueur appuie sur la touche Z");
             if (currentPosition > 0){
                 currentPosition--; //  ou  currentPosition-=1  ou  currentPosition = currentPosition -1
                 transform.position = new Vector3(startX, places[currentPosition].position.y, 0);
@@ -37,7 +35,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            Debug.Log("Le joueur appuie sur la touche S");
+            //Debug.Log("Le joueur appuie sur la touche S");
             if (currentPosition < 2)
             {
                 currentPosition++; //  ou  currentPosition+=1  ou  currentPosition = currentPosition +1
@@ -54,15 +52,24 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Collectable")
+        if (collision.tag == "Powerup" )
         {
             Destroy(collision.gameObject);
-            Debug.Log("+1");
+            fireRate = fireRate / 2;
+            GetComponent<SpriteRenderer>().color = Color.blue;
+            StartCoroutine(ResetPower());           
         }
     }
 
     void shoot()
     {
         Instantiate(projectilePrefab, firePosition.position, firePosition.rotation);
+    }
+
+    private IEnumerator ResetPower()
+    {
+        yield return new WaitForSeconds(5);
+        fireRate = fireRate * 2;
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

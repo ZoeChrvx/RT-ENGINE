@@ -6,7 +6,7 @@ public class LootBag : MonoBehaviour
 {
     public GameObject droppedItemPrefab;
     public List<Loot> lootList = new List<Loot>();
-    //public float dropForce = 300f;
+    public float dropForce = 300f;
 
     Loot GetDroppedItem()
     {
@@ -26,7 +26,7 @@ public class LootBag : MonoBehaviour
             return droppedItem;
         }
 
-        Debug.Log("No loot dropped");
+        //Debug.Log("No loot dropped");
         return null;
     }
 
@@ -39,8 +39,8 @@ public class LootBag : MonoBehaviour
             lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
 
             
-            //Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            //lootGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
+            Vector2 dropDirection = new Vector2(-1, 0);
+            lootGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
 
         }
     }

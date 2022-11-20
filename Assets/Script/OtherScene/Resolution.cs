@@ -28,19 +28,15 @@ public class Resolution : MonoBehaviour
                 break;
 
             case 1:
-                Screen.SetResolution(1680, 1050, true);                
+                Screen.SetResolution(1680, 900, true);                
                 break;
 
             case 2:
-                Screen.SetResolution(1600, 1200, true);
+                Screen.SetResolution(1366, 768, true);
                 break;
 
             case 3:
-                Screen.SetResolution(1280, 1024, true);
-                break;
-
-            case 4:
-                Screen.SetResolution(1020, 768, true);
+                Screen.SetResolution(1280, 720, true);
                 break;
         }
     }
