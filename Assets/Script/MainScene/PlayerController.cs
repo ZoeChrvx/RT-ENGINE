@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public int currentPosition = 1; //La currentPosition est 0 1 ou 2
     public float startX = 0, offsetX = 1;
 
+    public int powerUp = 0;
+
     void Start()
     {
         //startX = transform.position.x;
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             Debug.Log("Le joueur appuie sur la touche Z");
             if (currentPosition > 0){
@@ -33,7 +35,7 @@ public class PlayerController : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             Debug.Log("Le joueur appuie sur la touche S");
             if (currentPosition < 2)
@@ -47,6 +49,15 @@ public class PlayerController : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             shoot();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Collectable")
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("+1");
         }
     }
 
