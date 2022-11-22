@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LootBag : MonoBehaviour
 {
-    public GameObject droppedItemPrefab;
     public List<Loot> lootList = new List<Loot>();
     public float dropForce = 300f;
 
@@ -35,7 +34,7 @@ public class LootBag : MonoBehaviour
         Loot droppedItem = GetDroppedItem();
         if(droppedItem != null)
         {
-            GameObject lootGameObject = Instantiate(droppedItemPrefab, lootSpawnPosition, Quaternion.identity);
+            GameObject lootGameObject = Instantiate(droppedItem.lootPrefab, lootSpawnPosition, Quaternion.identity);
             lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
 
             

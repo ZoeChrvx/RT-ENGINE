@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyMouv : MonoBehaviour
 {
-    public float speedX = 1f;
+    public float speedX = 5f;
+    public static float speedFactor=1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,9 @@ public class EnemyMouv : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mouvement = new Vector3(-speedX * Time.deltaTime, 0, 0);
+        Vector3 mouvement = new Vector3(-speedX * speedFactor * Time.deltaTime, 0, 0);
         transform.position += mouvement;
     }
+
+    
 }

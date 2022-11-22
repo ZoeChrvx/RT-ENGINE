@@ -8,6 +8,7 @@ public class Loot : ScriptableObject
     public Sprite lootSprite;
     public string lootName;
     public int dropChance;
+    public GameObject lootPrefab;
    
     public Loot(string lootName, int dropChance)
     {

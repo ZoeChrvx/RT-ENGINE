@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Principal;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -52,12 +53,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Powerup" )
+        if (collision.tag == "Powerup0" )
         {
             Destroy(collision.gameObject);
             fireRate = fireRate / 2;
             GetComponent<SpriteRenderer>().color = Color.blue;
-            StartCoroutine(ResetPower());           
+            Invoke("ResetPower", 5);           
+        }
+        if (collision.tag == "Powerup1")
+        {
+            Destroy(collision.gameObject);
+            GetComponent<SpriteRenderer>().color = Color.green;
+            SlowEnemies();
         }
     }
 
@@ -66,10 +73,23 @@ public class PlayerController : MonoBehaviour
         Instantiate(projectilePrefab, firePosition.position, firePosition.rotation);
     }
 
-    private IEnumerator ResetPower()
+    private void ResetPower()
     {
-        yield return new WaitForSeconds(5);
         fireRate = fireRate * 2;
         GetComponent<SpriteRenderer>().color = Color.white;
     }
+
+    public void SlowEnemies()
+    {
+        EnemyMouv.speedFactor = EnemyMouv.speedFactor / 2;
+        Debug.Log("La vitesse est de" + EnemyMouv.speedFactor);
+        Invoke("ResetEnemiesSpeed", 5);
+    }
+
+    public void ResetEnemiesSpeed()
+    {
+        EnemyMouv.speedFactor = EnemyMouv.speedFactor * 2;
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
 }

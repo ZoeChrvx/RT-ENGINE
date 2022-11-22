@@ -15,3 +15,4 @@ MonoBehaviour:
   lootSprite: {fileID: 21300000, guid: 90e7c1472bb7df54a8762b3581c9f758, type: 3}
   lootName: PowerUp1 Ice
   dropChance: 35
+  lootPrefab: {fileID: 7927955212105129172, guid: fdf64c43a80b4f441a2031e17b9d2f88, type: 3}

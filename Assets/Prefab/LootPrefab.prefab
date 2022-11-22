@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2485411915805266271}
   - component: {fileID: 6494217425310994032}
   - component: {fileID: 5032104353220152389}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LootPrefab
   m_TagString: Powerup
   m_Icon: {fileID: 0}
