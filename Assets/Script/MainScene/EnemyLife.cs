@@ -7,6 +7,7 @@ public class EnemyLife : MonoBehaviour
         public void DeathEnemy()
     {
         GetComponent<LootBag>().InstantiateLoot(transform.position);
+        ScoreAndInformation.scoreCountEnemy = ScoreAndInformation.scoreCountEnemy + 1;
         Destroy(gameObject);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Life : MonoBehaviour
 {
     public List<GameObject> hearts;
-    int hp = 3;
+    public static int hp = 3;
     public ChangeScene changeScene;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class Life : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        
     }
 
     public void Hurt()
@@ -29,4 +29,6 @@ public class Life : MonoBehaviour
             changeScene.LoadDeath();
         }
     }
+
+    
 }

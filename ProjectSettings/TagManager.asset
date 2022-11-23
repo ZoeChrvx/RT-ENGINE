@@ -7,7 +7,7 @@ TagManager:
   - Collectable
   - Powerup0
   - Powerup1
-  - Powerup
+  - Powerup2
   layers:
   - Default
   - TransparentFX

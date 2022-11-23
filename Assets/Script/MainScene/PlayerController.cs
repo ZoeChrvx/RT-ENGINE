@@ -53,9 +53,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Powerup0" )
+        if (collision.tag == "Powerup" )
         {
             Destroy(collision.gameObject);
+            ScoreAndInformation.bonusPoint = ScoreAndInformation.bonusPoint + 20;
             fireRate = fireRate / 2;
             GetComponent<SpriteRenderer>().color = Color.blue;
             Invoke("ResetPower", 5);           
@@ -63,8 +64,14 @@ public class PlayerController : MonoBehaviour
         if (collision.tag == "Powerup1")
         {
             Destroy(collision.gameObject);
+            ScoreAndInformation.bonusPoint = ScoreAndInformation.bonusPoint + 10;
             GetComponent<SpriteRenderer>().color = Color.green;
             SlowEnemies();
+        }
+        if (collision.tag == "Powerup2")
+        {
+            Destroy(collision.gameObject);
+            ScoreAndInformation.bonusPoint = ScoreAndInformation.bonusPoint + 30;
         }
     }
 
@@ -92,4 +99,8 @@ public class PlayerController : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.white;
     }
 
+    //public void Heal()
+    //{
+    //    Life.hp ++;
+    //}
 }
