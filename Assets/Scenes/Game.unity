@@ -1282,6 +1282,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2434379107024005967, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
+      propertyPath: m_MaxValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434379107024005967, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
+      propertyPath: m_MinValue
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434379107024005967, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434379107024005967, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1703097222}
+    - target: {fileID: 2434379107024005967, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VolumeSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 2434379107024005967, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SetVolume, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
@@ -2276,10 +2300,10 @@ AudioSource:
   m_GameObject: {fileID: 1246915758}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 86502738c68f85f4ba499521d57857fc, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1929608208eaeff429e618a697faac37, type: 2}
   m_audioClip: {fileID: 8300000, guid: a484c127d3c45f14e917f2a083a0e3d3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2858,6 +2882,7 @@ GameObject:
   - component: {fileID: 1703097218}
   - component: {fileID: 1703097221}
   - component: {fileID: 1703097217}
+  - component: {fileID: 1703097222}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2966,6 +2991,19 @@ MonoBehaviour:
   scoreCounter: {fileID: 572350362}
   addScoreEnemy: {fileID: 1034291832}
   addScoreBonus: {fileID: 1562651377}
+--- !u!114 &1703097222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703097216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af975c67256cd9d46a7ef11958aba47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 1929608208eaeff429e618a697faac37, type: 2}
 --- !u!1 &1769457393
 GameObject:
   m_ObjectHideFlags: 0
