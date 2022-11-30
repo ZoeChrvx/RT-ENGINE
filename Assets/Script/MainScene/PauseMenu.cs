@@ -36,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = false;
     }
 
+
     public void LoadMainMenu()
     {
         Resume();
