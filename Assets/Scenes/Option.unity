@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 664812463}
   - component: {fileID: 664812462}
   - component: {fileID: 664812461}
-  - component: {fileID: 664812464}
   - component: {fileID: 664812465}
   m_Layer: 0
   m_Name: OptionMenu
@@ -229,19 +228,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &664812464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664812459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e825ef051645c4a8c01f5b9254960b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DResolution: {fileID: 0}
 --- !u!114 &664812465
 MonoBehaviour:
   m_ObjectHideFlags: 0
