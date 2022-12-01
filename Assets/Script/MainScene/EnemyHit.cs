@@ -20,20 +20,22 @@ public class EnemyHit : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //Définissez ici ce qui devrait se passer si la collision se produit
-        if (collision.transform.CompareTag("Player"))
+        //Dï¿½finissez ici ce qui devrait se passer si la collision se produit
+        if (collision.transform.CompareTag("Player") || collision.transform.CompareTag("Player1"))
         {
-            Debug.Log(gameObject.name + " has hit " + collision.gameObject.name);
+            //Debug.Log(gameObject.name + " has hit " + collision.gameObject.name);
             collision.gameObject.GetComponent<Life>().Hurt();
             Destroy(gameObject);
             //Definir la fonction LifeLoss(int loss) qui supprime les pv
-            Debug.Log(collision.gameObject.name + " loose 1 hp");
+            //Debug.Log(collision.gameObject.name + " loose 1 hp");
         }
     }
 
+    
+
     void OnCollisionExit2D(Collision2D collision)
     {
-        //Définissez ici ce qui devrait se passer si la collision s'arrête
-        Debug.Log(gameObject.name + " has stopped hitting " + collision.gameObject.name);
+        //Dï¿½finissez ici ce qui devrait se passer si la collision s'arrï¿½te
+        //Debug.Log(gameObject.name + " has stopped hitting " + collision.gameObject.name);
     }
 }

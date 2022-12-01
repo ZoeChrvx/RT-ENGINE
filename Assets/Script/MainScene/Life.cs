@@ -7,6 +7,9 @@ public class Life : MonoBehaviour
     public List<GameObject> hearts;
     public static int hp = 3;
     public ChangeScene changeScene;
+    public AudioClip pigHurt;
+    public AudioClip gameOver;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +24,13 @@ public class Life : MonoBehaviour
 
     public void Hurt()
     {
-        Debug.Log("Aie");
+        AudioManager.instance.PlayClipAt(pigHurt, transform.position);
         hp--;
         hearts[hp].SetActive(false);
         if (hp == 0)
         {
+            AudioManager.instance.PlayClipAt(gameOver, transform.position);
             changeScene.LoadDeath();
         }
-    }
-
-    
+    } 
 }

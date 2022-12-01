@@ -15,7 +15,6 @@ public class MouvementFireball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(gameObject.name + " has hit " + collision.gameObject.name);
         collision.gameObject.GetComponent<EnemyLife>().DeathEnemy();
         Destroy(gameObject);
     }

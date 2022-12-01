@@ -6,6 +6,7 @@ public class LootBag : MonoBehaviour
 {
     public List<Loot> lootList = new List<Loot>();
     public float dropForce = 300f;
+    public AudioClip dropItem;
 
     Loot GetDroppedItem()
     {
@@ -33,7 +34,8 @@ public class LootBag : MonoBehaviour
     {
         Loot droppedItem = GetDroppedItem();
         if(droppedItem != null)
-        {
+        {   
+            AudioManager.instance.PlayClipAt(dropItem, transform.position);
             GameObject lootGameObject = Instantiate(droppedItem.lootPrefab, lootSpawnPosition, Quaternion.identity);
             lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
 

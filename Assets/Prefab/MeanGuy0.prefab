@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6275199918613722655}
   m_Layer: 0
   m_Name: MeanGuy0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   lootList:
   - {fileID: 11400000, guid: 8c68c25b67003cc459a68e44567b5f20, type: 2}
   dropForce: 300
+  dropItem: {fileID: 8300000, guid: 5e7122509d70ad24c9a28282af9bb496, type: 3}
 --- !u!114 &7158919033183103026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc512c7b000a54d831a06629a279de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathBubble: {fileID: 8300000, guid: bef9eb72f9847b14e9b6de249d67d080, type: 3}
 --- !u!114 &6275199918613722655
 MonoBehaviour:
   m_ObjectHideFlags: 0

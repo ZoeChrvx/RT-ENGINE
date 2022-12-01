@@ -9,7 +9,6 @@ public class DestroyPU : MonoBehaviour
         if (collision.tag == "Collectable" || collision.tag == "Powerup" || collision.tag == "Powerup1" || collision.tag == "Powerup2" )
         {
             Destroy(collision.gameObject);
-            Debug.Log("Just destroy");
         }
     }
 }
