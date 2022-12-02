@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d3151bcad6c1f43a200689dfefe2fa, type: 3}
   m_Name: Drop1
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 21300000, guid: 90e7c1472bb7df54a8762b3581c9f758, type: 3}
+  lootSprite: {fileID: 21300000, guid: b10fbb6e62040e648b13ebf5740df001, type: 3}
   lootName: PowerUp1 Slow
   dropChance: 35
   lootPrefab: {fileID: 7927955212105129172, guid: fdf64c43a80b4f441a2031e17b9d2f88, type: 3}
