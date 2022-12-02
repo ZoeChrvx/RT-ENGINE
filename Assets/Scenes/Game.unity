@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: MainMenu
+  audioClip: {fileID: 0}
 --- !u!1 &213894364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,15 +1193,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 387f2872669701944aa8a351cdb2a631, type: 3}
     - target: {fileID: 2434379105741755343, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105741755343, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105741755343, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105741755343, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1220,11 +1221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105827235995, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105827235995, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379107024005965, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_Name
@@ -1652,15 +1653,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 387f2872669701944aa8a351cdb2a631, type: 3}
     - target: {fileID: 2434379105741755343, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105741755343, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105741755343, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105741755343, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1680,11 +1681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105827235995, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379105827235995, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2434379107024005965, guid: e9035c8f83d5201459e39b384616c4bc, type: 3}
       propertyPath: m_Name
@@ -2287,7 +2288,8 @@ MonoBehaviour:
   startX: 0
   offsetX: 1
   jump: {fileID: 8300000, guid: d631bfd709359af4d8c786868b3baa3d, type: 3}
-  fireball: {fileID: 8300000, guid: 1e1d34d8ff27c93479f693b00cfa2525, type: 3}
+  fireball: {fileID: 8300000, guid: 3ffb97a9e0bfbac4cad639f277ec1f61, type: 3}
+  animator: {fileID: 1214993924}
 --- !u!212 &1214993917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2420,7 +2422,7 @@ MonoBehaviour:
   - {fileID: 1512212509}
   - {fileID: 1381302710}
   changeScene: {fileID: 921028399}
-  pigHurt: {fileID: 8300000, guid: 06f9e1468e08f3743934e8d254a2c2a3, type: 3}
+  pigHurt: {fileID: 8300000, guid: 010d5f5655b3dc846ba86ea17b070be3, type: 3}
   gameOver: {fileID: 8300000, guid: 5f1f28e36a2cea84c978e748aa54040f, type: 3}
 --- !u!114 &1214993922
 MonoBehaviour:
@@ -2621,7 +2623,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246915758}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6275159418985352470, guid: 1929608208eaeff429e618a697faac37, type: 2}
   m_audioClip: {fileID: 8300000, guid: a484c127d3c45f14e917f2a083a0e3d3, type: 3}
@@ -3174,7 +3176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -322.18, y: -28.8}
+  m_AnchoredPosition: {x: -322.17993, y: -28.800049}
   m_SizeDelta: {x: -644.37, y: -183.5324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1562651377
@@ -3505,7 +3507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1769457394
 RectTransform:
   m_ObjectHideFlags: 0

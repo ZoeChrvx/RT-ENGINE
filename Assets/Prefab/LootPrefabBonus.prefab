@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5032104353220152389}
   - component: {fileID: 2349174987719541619}
   m_Layer: 10
-  m_Name: LootPrefab 2
+  m_Name: LootPrefabBonus
   m_TagString: Powerup2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
