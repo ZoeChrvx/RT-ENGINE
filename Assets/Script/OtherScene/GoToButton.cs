@@ -7,7 +7,6 @@ public class GoToButton : MonoBehaviour
 {
 
     public string targetScene;
-
     public void GoTo()
     {
         SceneManager.LoadScene(targetScene);

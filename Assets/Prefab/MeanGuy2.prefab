@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7158919033183103026}
   - component: {fileID: 8491308013099852110}
   - component: {fileID: 6275199918613722655}
+  - component: {fileID: 7849265598964443023}
   m_Layer: 0
   m_Name: MeanGuy2
   m_TagString: Enemy
@@ -79,8 +80,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 54
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.534814, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: af58a65f67143be438e40bcab14186f8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -107,7 +108,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 0.9613402}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -177,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc512c7b000a54d831a06629a279de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7849265598964443023}
   deathBubble: {fileID: 8300000, guid: d9b6795d7859cf24ab8e2746ca1ac41c, type: 3}
 --- !u!114 &6275199918613722655
 MonoBehaviour:
@@ -191,3 +193,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedX: 4
+--- !u!95 &7849265598964443023
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158919033183103036}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90f3e0ac72aa77345b85f24d0ed18445, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

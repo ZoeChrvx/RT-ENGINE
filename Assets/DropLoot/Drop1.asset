@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootSprite: {fileID: 21300000, guid: b10fbb6e62040e648b13ebf5740df001, type: 3}
   lootName: PowerUp1 Slow
-  dropChance: 35
+  dropChance: 20
   lootPrefab: {fileID: 7927955212105129172, guid: fdf64c43a80b4f441a2031e17b9d2f88, type: 3}

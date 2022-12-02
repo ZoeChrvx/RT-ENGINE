@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 7158919033183103026}
   - component: {fileID: 8491308013099852110}
   - component: {fileID: 6275199918613722655}
-  - component: {fileID: -7787847684120539759}
+  - component: {fileID: -1324471019692821125}
   m_Layer: 0
-  m_Name: MeanGuy0
+  m_Name: MeanGuy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,8 +32,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7158919033183103036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.8569, y: 2.6431, z: 0}
-  m_LocalScale: {x: 1.2063, y: 1.2063, z: 1.2063}
+  m_LocalPosition: {x: -6.96, y: 2.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 54
-  m_Sprite: {fileID: 21300000, guid: f65b95deef6fbc143adaa5aec55fcb67, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56fbde0afa8016441ab6356b75bf42ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,7 +108,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.0449438}
+    oldSize: {x: 1, y: 1.030303}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootList:
-  - {fileID: 11400000, guid: 8c68c25b67003cc459a68e44567b5f20, type: 2}
+  - {fileID: 11400000, guid: 777e14e6f0fdeab4399ea6ee3619d850, type: 2}
   dropForce: 300
   dropItem: {fileID: 8300000, guid: 24524b3db8f127945bd73ac5a8fb694c, type: 3}
 --- !u!114 &7158919033183103026
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc512c7b000a54d831a06629a279de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: -7787847684120539759}
+  animator: {fileID: -1324471019692821125}
   deathBubble: {fileID: 8300000, guid: d9b6795d7859cf24ab8e2746ca1ac41c, type: 3}
 --- !u!114 &6275199918613722655
 MonoBehaviour:
@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed880b971696c242a7627a48dea36a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedX: 6
---- !u!95 &-7787847684120539759
+  speedX: 5
+--- !u!95 &-1324471019692821125
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ Animator:
   m_GameObject: {fileID: 7158919033183103036}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 22782c7d4c757c649bdc949003412bdf, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2949f4d23942c274d992adb53732af9d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
