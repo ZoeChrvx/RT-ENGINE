@@ -30,7 +30,13 @@ public class Life : MonoBehaviour
         if (hp == 0)
         {
             AudioManager.instance.PlayClipAt(gameOver, transform.position);
-            changeScene.LoadDeath();
+            Invoke("GoDeathScene", 1);
         }
     } 
+
+    public void GoDeathScene()
+    {
+        changeScene.LoadDeath();
+    }
+
 }

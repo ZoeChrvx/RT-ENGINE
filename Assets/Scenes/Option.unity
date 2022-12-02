@@ -1546,6 +1546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: MainMenu
+  audioClip: {fileID: 8300000, guid: 36e0caa27400d4344902a10ace7a3a44, type: 3}
 --- !u!114 &1766058523
 MonoBehaviour:
   m_ObjectHideFlags: 0

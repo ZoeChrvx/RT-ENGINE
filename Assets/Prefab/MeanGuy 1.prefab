@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7158919033183103026}
   - component: {fileID: 8491308013099852110}
   - component: {fileID: 6275199918613722655}
+  - component: {fileID: -1324471019692821125}
   m_Layer: 0
   m_Name: MeanGuy 1
   m_TagString: Enemy
@@ -79,8 +80,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 54
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.41631794, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 56fbde0afa8016441ab6356b75bf42ac, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -107,7 +108,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 1.030303}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,7 +153,7 @@ MonoBehaviour:
   lootList:
   - {fileID: 11400000, guid: 777e14e6f0fdeab4399ea6ee3619d850, type: 2}
   dropForce: 300
-  dropItem: {fileID: 8300000, guid: 5e7122509d70ad24c9a28282af9bb496, type: 3}
+  dropItem: {fileID: 8300000, guid: 24524b3db8f127945bd73ac5a8fb694c, type: 3}
 --- !u!114 &7158919033183103026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc512c7b000a54d831a06629a279de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathBubble: {fileID: 8300000, guid: bef9eb72f9847b14e9b6de249d67d080, type: 3}
+  animator: {fileID: -1324471019692821125}
+  deathBubble: {fileID: 8300000, guid: d9b6795d7859cf24ab8e2746ca1ac41c, type: 3}
 --- !u!114 &6275199918613722655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +193,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedX: 5
+--- !u!95 &-1324471019692821125
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158919033183103036}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2949f4d23942c274d992adb53732af9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float startX = 0, offsetX = 1;
     public AudioClip jump;
     public AudioClip fireball;
+    public Animator animator;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("Le joueur appuie sur la touche Z");
             if (currentPosition > 0)
             {
+                animator.SetTrigger("Jump");
                 AudioManager.instance.PlayClipAt(jump, transform.position);
                 currentPosition--; //  ou  currentPosition-=1  ou  currentPosition = currentPosition -1
                 transform.position = new Vector3(startX, places[currentPosition].position.y, 0);
@@ -44,9 +46,11 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("Le joueur appuie sur la touche S");
             if (currentPosition < 2)
             {
+                animator.SetTrigger("Jump");
                 AudioManager.instance.PlayClipAt(jump, transform.position);
                 currentPosition++; //  ou  currentPosition+=1  ou  currentPosition = currentPosition +1
                 transform.position = new Vector3(startX, places[currentPosition].position.y, 0);
+                //animator.SetBool("Jump", false);
             }
         }
 

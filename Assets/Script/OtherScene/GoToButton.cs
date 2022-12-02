@@ -7,10 +7,12 @@ public class GoToButton : MonoBehaviour
 {
 
     public string targetScene;
+    public AudioClip audioClip;
 
 
     public void GoTo()
     {
+        AudioManager.instance.PlayClipAt(audioClip, transform.position);
         SceneManager.LoadScene(targetScene);
     }
 }

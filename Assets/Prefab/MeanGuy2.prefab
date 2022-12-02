@@ -152,7 +152,7 @@ MonoBehaviour:
   lootList:
   - {fileID: 11400000, guid: d57fedef6eb02d844b83449ba2add501, type: 2}
   dropForce: 300
-  dropItem: {fileID: 8300000, guid: 5e7122509d70ad24c9a28282af9bb496, type: 3}
+  dropItem: {fileID: 8300000, guid: 24524b3db8f127945bd73ac5a8fb694c, type: 3}
 --- !u!114 &7158919033183103026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc512c7b000a54d831a06629a279de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathBubble: {fileID: 8300000, guid: bef9eb72f9847b14e9b6de249d67d080, type: 3}
+  deathBubble: {fileID: 8300000, guid: d9b6795d7859cf24ab8e2746ca1ac41c, type: 3}
 --- !u!114 &6275199918613722655
 MonoBehaviour:
   m_ObjectHideFlags: 0
