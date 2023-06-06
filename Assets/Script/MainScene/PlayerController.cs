@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public ScoreAndInformation scoreAndInformation;
     public float fireRate = 0.3f;
     private float nextFire = 0.0f;
     public Transform firePosition;
@@ -66,7 +67,7 @@ public class PlayerController : MonoBehaviour
         if (collision.tag == "Powerup" )
         {
             Destroy(collision.gameObject);
-            ScoreAndInformation.bonusPoint = ScoreAndInformation.bonusPoint + 20;
+            scoreAndInformation.bonusPoint = scoreAndInformation.bonusPoint + 20;
             fireRate = fireRate / 2;
             GetComponent<SpriteRenderer>().color = Color.blue;
             Invoke("ResetPower", 5);           
@@ -74,14 +75,14 @@ public class PlayerController : MonoBehaviour
         if (collision.tag == "Powerup1")
         {
             Destroy(collision.gameObject);
-            ScoreAndInformation.bonusPoint = ScoreAndInformation.bonusPoint + 10;
+            scoreAndInformation.bonusPoint = scoreAndInformation.bonusPoint + 10;
             GetComponent<SpriteRenderer>().color = Color.green;
             SlowEnemies();
         }
         if (collision.tag == "Powerup2")
         {
             Destroy(collision.gameObject);
-            ScoreAndInformation.bonusPoint = ScoreAndInformation.bonusPoint + 30;
+            scoreAndInformation.bonusPoint = scoreAndInformation.bonusPoint + 30;
         }
     }
 

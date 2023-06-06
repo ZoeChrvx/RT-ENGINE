@@ -178,8 +178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2edc512c7b000a54d831a06629a279de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreAndInformation: {fileID: 4578929098369233149, guid: c578243e4b58ac04babf79a3d65ef58d, type: 3}
   animator: {fileID: -7787847684120539759}
   deathBubble: {fileID: 8300000, guid: d9b6795d7859cf24ab8e2746ca1ac41c, type: 3}
+  canvas: {fileID: 4578929098369233144, guid: c578243e4b58ac04babf79a3d65ef58d, type: 3}
 --- !u!114 &6275199918613722655
 MonoBehaviour:
   m_ObjectHideFlags: 0

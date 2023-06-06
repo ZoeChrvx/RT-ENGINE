@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Life : MonoBehaviour
 {
+    public JsonReadWriteSystem jsonReadWriteSystem;
     public List<GameObject> hearts;
     public static int hp = 3;
     public ChangeScene changeScene;
@@ -29,6 +30,7 @@ public class Life : MonoBehaviour
         hearts[hp].SetActive(false);
         if (hp == 0)
         {
+            jsonReadWriteSystem.SaveToJson();
             AudioManager.instance.PlayClipAt(gameOver, transform.position);
             Invoke("GoDeathScene", 1);
         }

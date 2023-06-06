@@ -5,10 +5,11 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
+    public ScoreAndInformation scoreAndInformation;
     public TextMeshProUGUI totalScore;
     void Start()
     {
-        totalScore.text = "  Score : " + (ScoreAndInformation.scoreCountEnemy + ScoreAndInformation.bonusPoint);
+        totalScore.text = "  Score : " + (scoreAndInformation.scoreCountEnemy + scoreAndInformation.bonusPoint);
     }
 
     void Update()

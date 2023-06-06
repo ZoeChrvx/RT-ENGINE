@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class QuitButton : MonoBehaviour
 {
+    public JsonReadWriteSystem jsonReadWriteSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,7 @@ public class QuitButton : MonoBehaviour
 
     public void QuitGame()
     {
+        jsonReadWriteSystem.SaveToJson();
         Debug.Log("Quit Game");
         Application.Quit();   
     }
